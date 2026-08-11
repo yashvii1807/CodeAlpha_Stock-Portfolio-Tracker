@@ -41,3 +41,15 @@ while True:
     if stock_name not in stock_prices:
         print("Stock not available. Please choose from the available stocks.")
         continue
+
+ # Ask for quantity
+    try:
+        quantity = int(input("Enter quantity: "))
+
+        if quantity <= 0:
+            print("Quantity must be greater than 0.")
+            continue
+
+    except ValueError:
+        print("Please enter a valid number.")
+        continue
